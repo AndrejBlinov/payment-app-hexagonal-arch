@@ -1,4 +1,4 @@
-import {BigNumber} from 'bignumber.js'
+import { BigNumber } from 'bignumber.js'
 import { threadId } from 'worker_threads';
 
 export class MoneyEntity {
@@ -21,10 +21,10 @@ export class MoneyEntity {
     }
 
     negative(): MoneyEntity {
-        return new MoneyEntity(this.amount.negative())
+        return new MoneyEntity(this.amount.negated() )
     }
 
     isPositiveOrZero() {
-        return this.amount.compratedTo(0) >= 0;
+        return this.amount.comparedTo(0) >= 0;
     }
 }
