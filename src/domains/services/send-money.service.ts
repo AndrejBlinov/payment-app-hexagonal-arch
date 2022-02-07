@@ -1,12 +1,12 @@
 import { AccountEntity } from "../entities/account.entity";
 import { SendMoneyCommand } from "../ports/in/send-money.command";
 import { SendMoneyUseCase } from "../ports/in/send-money.user-case";
-import { LoadAccoundPort } from "../ports/out/load-account.port";
+import { LoadAccountPort } from "../ports/out/load-account.port";
 import { UpdateAccountStatePort } from "../ports/out/update-account-state.port";
 
 export class SendMoneyService implements SendMoneyUseCase{
     constructor(
-        private readonly _loadAccountport: LoadAccoundPort,
+        private readonly _loadAccountport: LoadAccountPort,
         private readonly _updateAccountStatePort: UpdateAccountStatePort
     ) {}
 

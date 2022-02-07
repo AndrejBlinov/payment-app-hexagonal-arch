@@ -1,5 +1,5 @@
 import { AccountEntity, AccountId } from "../../entities/account.entity";
 
-export interface LoadAccoundPort {
+export interface LoadAccountPort {
     loadAccount(accountId: AccountId): AccountEntity;
 }
