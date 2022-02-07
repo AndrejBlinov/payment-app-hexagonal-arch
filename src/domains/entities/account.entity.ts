@@ -9,7 +9,7 @@ export class AccountEntity {
     constructor(
         private readonly _id: AccountId,
         private readonly _baseLineBalance: MoneyEntity,
-        private readonly _activityWindow: ActivityWindowEntity
+        private readonly _activityWindow: ActivityWindowEntity,
     ) {}
 
     get id() : AccountId {
@@ -38,6 +38,7 @@ export class AccountEntity {
 
         const withdrawal: ActivityEntity = new ActivityEntity(
             this.id,
+            this.id,
             targetAccountId,
             new Date(),
             money
@@ -49,6 +50,7 @@ export class AccountEntity {
 
     public deposit(money: MoneyEntity, sourceAccountId: AccountId): boolean {
         const deposit: ActivityEntity = new ActivityEntity(
+            this.id,
             sourceAccountId,
             this.id,
             new Date(),
