@@ -5,7 +5,7 @@ export class ActivityOrmEntity{
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @Column({type: 'varchar' , length: 15})
     timestamp: number;
 
     @Column()
