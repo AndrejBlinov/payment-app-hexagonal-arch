@@ -32,7 +32,7 @@ export class AccountEntity {
     }
 
     public withdraw(money: MoneyEntity, targetAccountId: AccountId): boolean {
-        if (this._mayWithdrawMoney(money)) {
+        if (!this._mayWithdrawMoney(money)) {
             return false;
         }
 
