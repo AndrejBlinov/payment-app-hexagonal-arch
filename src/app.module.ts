@@ -10,9 +10,9 @@ import { AccountWebModule } from './modules/account-web/account-web.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
-        envFilePath: '.env',
-    }),
+    // ConfigModule.forRoot({
+    //     envFilePath: '.env',
+    // }),
     TypeOrmModule.forRoot({
       type: 'sqlite',
       database: join(__dirname, '..', 'data', 'data.sqlite'),
@@ -30,7 +30,7 @@ import { AccountWebModule } from './modules/account-web/account-web.module';
     }),
     AccountPersistenceModule,
     AccountWebModule,
-    TypeOrmModule.forFeature([AccountOrmEntity, ActivityOrmEntity])
+    // TypeOrmModule.forFeature([AccountOrmEntity, ActivityOrmEntity])
   ],
   controllers: [],
   providers: [],

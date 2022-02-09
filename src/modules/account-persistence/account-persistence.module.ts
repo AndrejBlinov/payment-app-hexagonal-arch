@@ -8,9 +8,9 @@ import { ActivityOrmEntity } from "./activity.orm-entity";
 
 @Global()
 @Module({
-    imports: [
-        TypeOrmModule.forFeature([AccountOrmEntity, ActivityOrmEntity])
-    ],
+    // imports: [
+    //     TypeOrmModule.forFeature([AccountOrmEntity, ActivityOrmEntity])
+    // ],
     providers: [
         AccountPersistanceAdapterService,
         {

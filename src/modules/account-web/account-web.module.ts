@@ -8,9 +8,9 @@ import { SendMoneyController } from "./send-money.controller";
     controllers: [
         SendMoneyController
     ],
-    imports: [
-        TypeOrmModule.forFeature([AccountOrmEntity, ActivityOrmEntity])
-    ],
+    // imports: [
+    //     TypeOrmModule.forFeature([AccountOrmEntity, ActivityOrmEntity])
+    // ],
 })
 export class AccountWebModule {
 
